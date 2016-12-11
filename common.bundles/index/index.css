@@ -1,0 +1,161 @@
+.header {
+    background-color: red;
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: '1100px';
+    margin-left: auto;
+    margin-right: auto;
+}
+.row_order_reverse {
+    flex-direction: row-reverse;
+    flex-wrap: row-reverse;
+}
+@media (--small) {
+    /* {s,m,l}al = {small, medium, large} align left */
+    .row_sal {
+        justify-content: flex-start;
+        text-align: start;
+    }
+    /* {s,m,l}ac = {small, medium, large} align center */
+    .row_sac {
+        justify-content: center;
+        text-align: center;
+    }
+    /* {s,m,l}ar = {small, medium, large} align right */
+    .row_sar {
+        justify-content: flex-end;
+        text-align: end;
+    }
+    /* {s,m,l}vat = {small, medium, large} vertical align top */
+    .row_svat {
+        align-items: flex-start;
+    }
+    /* {s,m,l}vam = {small, medium, large} vertical align medium */
+    .row_svam {
+        align-items: center;
+    }
+    /* {s,m,l}vab = {small, medium, large} vertical align bottom */
+    .row_svab {
+        align-items: flex-end;
+    }
+}
+@media (--medium) {
+    /* {s,m,l}al = {small, medium, large} align left */
+    .row_mal {
+        justify-content: flex-start;
+        text-align: start;
+    }
+    /* {s,m,l}ac = {small, medium, large} align center */
+    .row_mac {
+        justify-content: center;
+        text-align: center;
+    }
+    /* {s,m,l}ar = {small, medium, large} align right */
+    .row_mar {
+        justify-content: flex-end;
+        text-align: end;
+    }
+    /* {s,m,l}vat = {small, medium, large} vertical align top */
+    .row_mvat {
+        align-items: flex-start;
+    }
+    /* {s,m,l}vam = {small, medium, large} vertical align medium */
+    .row_mvam {
+        align-items: center;
+    }
+    /* {s,m,l}vab = {small, medium, large} vertical align bottom */
+    .row_mvab {
+        align-items: flex-end;
+    }
+}
+@media (--large) {
+    /* {s,m,l}al = {small, medium, large} align left */
+    .row_lal {
+        justify-content: flex-start;
+        text-align: start;
+    }
+    /* {s,m,l}ac = {small, medium, large} align center */
+    .row_lac {
+        justify-content: center;
+        text-align: center;
+    }
+    /* {s,m,l}ar = {small, medium, large} align right */
+    .row_lar {
+        justify-content: flex-end;
+        text-align: end;
+    }
+    /* {s,m,l}vat = {small, medium, large} vertical align top */
+    .row_lvat {
+        align-items: flex-start;
+    }
+    /* {s,m,l}vam = {small, medium, large} vertical align medium */
+    .row_lvam {
+        align-items: center;
+    }
+    /* {s,m,l}vab = {small, medium, large} vertical align bottom */
+    .row_lvab {
+        align-items: flex-end;
+    }
+}
+@media (--xlarge) {
+    /* {s,m,l}al = {small, medium, large} align left */
+    .row_xlal {
+        justify-content: flex-start;
+        text-align: start;
+    }
+    /* {s,m,l}ac = {small, medium, large} align center */
+    .row_xlac {
+        justify-content: center;
+        text-align: center;
+    }
+    /* {s,m,l}ar = {small, medium, large} align right */
+    .row_xlar {
+        justify-content: flex-end;
+        text-align: end;
+    }
+    /* {s,m,l}vat = {small, medium, large} vertical align top */
+    .row_xlvat {
+        align-items: flex-start;
+    }
+    /* {s,m,l}vam = {small, medium, large} vertical align medium */
+    .row_xlvam {
+        align-items: center;
+    }
+    /* {s,m,l}vab = {small, medium, large} vertical align bottom */
+    .row_xlvab {
+        align-items: flex-end;
+    }
+}
+@media (--xxlarge) {
+    /* {s,m,l}al = {small, medium, large} align left */
+    .row_xxlal {
+        justify-content: flex-start;
+        text-align: start;
+    }
+    /* {s,m,l}ac = {small, medium, large} align center */
+    .row_xxlac {
+        justify-content: center;
+        text-align: center;
+    }
+    /* {s,m,l}ar = {small, medium, large} align right */
+    .row_xxlar {
+        justify-content: flex-end;
+        text-align: end;
+    }
+    /* {s,m,l}vat = {small, medium, large} vertical align top */
+    .row_xxlvat {
+        align-items: flex-start;
+    }
+    /* {s,m,l}vam = {small, medium, large} vertical align medium */
+    .row_xxlvam {
+        align-items: center;
+    }
+    /* {s,m,l}vab = {small, medium, large} vertical align bottom */
+    .row_xxlvab {
+        align-items: flex-end;
+    }
+}
