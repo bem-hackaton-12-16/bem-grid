@@ -1,5 +1,11 @@
 [{
     mustDeps : [
-        { block : 'mq' }
-    ]
+        {block : 'mq'},
+        {block: 'vars'}
+    ],
+    shouldDeps: {
+        mods: {
+            sw: 2
+        }
+    }
 }];

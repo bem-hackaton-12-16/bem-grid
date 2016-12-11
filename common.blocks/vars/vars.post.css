@@ -1,4 +1,5 @@
 $columns: 12;
 $maxWidth: '1100px';
-$gutter: '10px';
+$gutter: 10px;
 $flex: 'flex';
+$size: 11;
