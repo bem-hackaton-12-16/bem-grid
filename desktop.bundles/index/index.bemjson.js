@@ -51,6 +51,9 @@ module.exports = {
                             elem: 'col',
                             mods: {sw: 2},
                             content: 'Hello 6'
+                        },
+                        {
+                            block: 'vars'
                         }
                     ]
                 }
