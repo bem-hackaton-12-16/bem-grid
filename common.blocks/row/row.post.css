@@ -1,5 +1,4 @@
-@lost gutter $gutter;
-@lost flexbox $flex;
+@lost gutter var(--gutter);
 
 @define-mixin row_align_classes $size {
     /* {s,m,l}al = {small, medium, large} align left */

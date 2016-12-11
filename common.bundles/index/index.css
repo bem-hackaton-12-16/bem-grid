@@ -1,14 +1,331 @@
+:root {
+    --columns: 12;
+    --maxWidth: 1100px;
+    --gutter: 10px;
+    --flex: 'flex';
+    --size: 11;
+    --columnsExceptOne: 11;
+
+    --color-blue: #00f;
+}
+@media (--small) {
+    /* normal col */
+    /* {s,m,l}w = {small, medium, large} width */
+    @for $i from 1 to var(--columns) {
+        .row__col_sw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+        }
+        .row__col_sw_$(i):nth-child(1n) {
+            float: left;
+            margin-right: var(--gutter);
+            clear: none;
+        }
+        .row__col_sw_$(i):last-child {
+            margin-right: 0;
+        }
+        .row__col_sw_$(i):nth-child($columnsn) {
+            margin-right: 0;
+            float: right;
+        }
+        .row__col_sw_$(i):nth-child($columnsn + 1) {
+            clear: both;
+        }
+    }
+    /* offset col */
+    /* {s,m,l}o = {small, medium, large} offset */
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_so_$(i) {
+            position: relative;
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+        }
+    }
+    /* auto size col */
+    .row__col_s {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        margin-right: $gutter;
+    }
+    .row__col_s:last-child {
+        margin-right: 0;
+    }
+}
+@media (--small-only) {
+    .row__col_sw_0 {
+        display: none;
+    }
+    .row__col_so_0 {
+        margin-left: 0;
+    }
+    /* {s,m,l}of = {small, medium, large} order first */
+    .row__col_sof {
+        order: -1;
+    }
+    /* {s,m,l}ol = {small, medium, large} order last */
+    .row__col_sol {
+        order: 1;
+    }
+}
+@media (--medium) {
+    /* normal col */
+    /* {s,m,l}w = {small, medium, large} width */
+    @for $i from 1 to var(--columns) {
+        .row__col_mw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+        }
+        .row__col_mw_$(i):nth-child(1n) {
+            float: left;
+            margin-right: var(--gutter);
+            clear: none;
+        }
+        .row__col_mw_$(i):last-child {
+            margin-right: 0;
+        }
+        .row__col_mw_$(i):nth-child($columnsn) {
+            margin-right: 0;
+            float: right;
+        }
+        .row__col_mw_$(i):nth-child($columnsn + 1) {
+            clear: both;
+        }
+    }
+    /* offset col */
+    /* {s,m,l}o = {small, medium, large} offset */
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_mo_$(i) {
+            position: relative;
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+        }
+    }
+    /* auto size col */
+    .row__col_m {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        margin-right: $gutter;
+    }
+    .row__col_m:last-child {
+        margin-right: 0;
+    }
+}
+@media (--medium-only) {
+    .row__col_mw_0 {
+        display: none;
+    }
+    .row__col_mo_0 {
+        margin-left: 0;
+    }
+    /* {s,m,l}of = {small, medium, large} order first */
+    .row__col_mof {
+        order: -1;
+    }
+    /* {s,m,l}ol = {small, medium, large} order last */
+    .row__col_mol {
+        order: 1;
+    }
+}
+@media (--large) {
+    /* normal col */
+    /* {s,m,l}w = {small, medium, large} width */
+    @for $i from 1 to var(--columns) {
+        .row__col_lw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+        }
+        .row__col_lw_$(i):nth-child(1n) {
+            float: left;
+            margin-right: var(--gutter);
+            clear: none;
+        }
+        .row__col_lw_$(i):last-child {
+            margin-right: 0;
+        }
+        .row__col_lw_$(i):nth-child($columnsn) {
+            margin-right: 0;
+            float: right;
+        }
+        .row__col_lw_$(i):nth-child($columnsn + 1) {
+            clear: both;
+        }
+    }
+    /* offset col */
+    /* {s,m,l}o = {small, medium, large} offset */
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_lo_$(i) {
+            position: relative;
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+        }
+    }
+    /* auto size col */
+    .row__col_l {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        margin-right: $gutter;
+    }
+    .row__col_l:last-child {
+        margin-right: 0;
+    }
+}
+@media (--large-only) {
+    .row__col_lw_0 {
+        display: none;
+    }
+    .row__col_lo_0 {
+        margin-left: 0;
+    }
+    /* {s,m,l}of = {small, medium, large} order first */
+    .row__col_lof {
+        order: -1;
+    }
+    /* {s,m,l}ol = {small, medium, large} order last */
+    .row__col_lol {
+        order: 1;
+    }
+}
+@media (--xlarge) {
+    /* normal col */
+    /* {s,m,l}w = {small, medium, large} width */
+    @for $i from 1 to var(--columns) {
+        .row__col_xlw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+        }
+        .row__col_xlw_$(i):nth-child(1n) {
+            float: left;
+            margin-right: var(--gutter);
+            clear: none;
+        }
+        .row__col_xlw_$(i):last-child {
+            margin-right: 0;
+        }
+        .row__col_xlw_$(i):nth-child($columnsn) {
+            margin-right: 0;
+            float: right;
+        }
+        .row__col_xlw_$(i):nth-child($columnsn + 1) {
+            clear: both;
+        }
+    }
+    /* offset col */
+    /* {s,m,l}o = {small, medium, large} offset */
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_xlo_$(i) {
+            position: relative;
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+        }
+    }
+    /* auto size col */
+    .row__col_xl {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        margin-right: $gutter;
+    }
+    .row__col_xl:last-child {
+        margin-right: 0;
+    }
+}
+@media (--xlarge-only) {
+    .row__col_xlw_0 {
+        display: none;
+    }
+    .row__col_xlo_0 {
+        margin-left: 0;
+    }
+    /* {s,m,l}of = {small, medium, large} order first */
+    .row__col_xlof {
+        order: -1;
+    }
+    /* {s,m,l}ol = {small, medium, large} order last */
+    .row__col_xlol {
+        order: 1;
+    }
+}
+@media (--xxlarge) {
+    /* normal col */
+    /* {s,m,l}w = {small, medium, large} width */
+    @for $i from 1 to var(--columns) {
+        .row__col_xxlw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+        }
+        .row__col_xxlw_$(i):nth-child(1n) {
+            float: left;
+            margin-right: var(--gutter);
+            clear: none;
+        }
+        .row__col_xxlw_$(i):last-child {
+            margin-right: 0;
+        }
+        .row__col_xxlw_$(i):nth-child($columnsn) {
+            margin-right: 0;
+            float: right;
+        }
+        .row__col_xxlw_$(i):nth-child($columnsn + 1) {
+            clear: both;
+        }
+    }
+    /* offset col */
+    /* {s,m,l}o = {small, medium, large} offset */
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_xxlo_$(i) {
+            position: relative;
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+        }
+    }
+    /* auto size col */
+    .row__col_xxl {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+        margin-right: $gutter;
+    }
+    .row__col_xxl:last-child {
+        margin-right: 0;
+    }
+}
+@media (--xxlarge-only) {
+    .row__col_xxlw_0 {
+        display: none;
+    }
+    .row__col_xxlo_0 {
+        margin-left: 0;
+    }
+    /* {s,m,l}of = {small, medium, large} order first */
+    .row__col_xxlof {
+        order: -1;
+    }
+    /* {s,m,l}ol = {small, medium, large} order last */
+    .row__col_xxlol {
+        order: 1;
+    }
+}
 .header {
-    background-color: red;
+    background-color: var(--color-blue);
 }
 .row {
     display: flex;
     flex-flow: row wrap;
-    display: flex;
-    flex-flow: row wrap;
-    max-width: '1100px';
+    max-width: $maxWidth;
     margin-left: auto;
     margin-right: auto;
+}
+.row:before {
+    content: '';
+    display: table;
+}
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
 }
 .row_order_reverse {
     flex-direction: row-reverse;
