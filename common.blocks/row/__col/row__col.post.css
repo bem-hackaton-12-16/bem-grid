@@ -1,14 +1,14 @@
 @define-mixin col_base_classes $size {
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
-    @for $i from 1 to $columns {
+    @for $i from 1 to var(--columns) {
         .row__col_$(size)w_$(i) {
             lost-column: $i/$columns;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
-    @for $i from 1 to $columnsExceptOne {
+    @for $i from 1 to var(--columnsExceptOne) {
         .row__col_$(size)o_$(i) {
         lost-move: $i/$columns;
     }

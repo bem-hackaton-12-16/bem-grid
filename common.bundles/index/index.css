@@ -1,32 +1,42 @@
+:root {
+    --columns: 12;
+    --maxWidth: 1100px;
+    --gutter: 10px;
+    --flex: 'flex';
+    --size: 11;
+    --columnsExceptOne: 11;
+
+    --color-blue: #00f;
+}
 @media (--small) {
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
-    @for 2 from 1 to 12 {
-        .row__col_sw_2 {
-            width: calc(99.9% * 1/6 - (10px - 10px * 1/6));
+    @for $i from 1 to var(--columns) {
+        .row__col_sw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_sw_2:nth-child(1n) {
+        .row__col_sw_$(i):nth-child(1n) {
             float: left;
-            margin-right: 10px;
+            margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_sw_2:last-child {
+        .row__col_sw_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_sw_2:nth-child(6n) {
+        .row__col_sw_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_sw_2:nth-child(6n + 1) {
+        .row__col_sw_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
-    @for 2 from 1 to 11 {
-        .row__col_so_2 {
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_so_$(i) {
             position: relative;
-            left: calc(99.9% * 2/12 - (10px - 10px * 2/12) + 10px);
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
         }
     }
     /* auto size col */
@@ -36,7 +46,7 @@
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: 10px;
+        margin-right: $gutter;
     }
     .row__col_s:last-child {
         margin-right: 0;
@@ -61,32 +71,32 @@
 @media (--medium) {
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
-    @for 2 from 1 to 12 {
-        .row__col_mw_2 {
-            width: calc(99.9% * 1/6 - (10px - 10px * 1/6));
+    @for $i from 1 to var(--columns) {
+        .row__col_mw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_mw_2:nth-child(1n) {
+        .row__col_mw_$(i):nth-child(1n) {
             float: left;
-            margin-right: 10px;
+            margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_mw_2:last-child {
+        .row__col_mw_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_mw_2:nth-child(6n) {
+        .row__col_mw_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_mw_2:nth-child(6n + 1) {
+        .row__col_mw_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
-    @for 2 from 1 to 11 {
-        .row__col_mo_2 {
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_mo_$(i) {
             position: relative;
-            left: calc(99.9% * 2/12 - (10px - 10px * 2/12) + 10px);
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
         }
     }
     /* auto size col */
@@ -96,7 +106,7 @@
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: 10px;
+        margin-right: $gutter;
     }
     .row__col_m:last-child {
         margin-right: 0;
@@ -121,32 +131,32 @@
 @media (--large) {
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
-    @for 2 from 1 to 12 {
-        .row__col_lw_2 {
-            width: calc(99.9% * 1/6 - (10px - 10px * 1/6));
+    @for $i from 1 to var(--columns) {
+        .row__col_lw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_lw_2:nth-child(1n) {
+        .row__col_lw_$(i):nth-child(1n) {
             float: left;
-            margin-right: 10px;
+            margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_lw_2:last-child {
+        .row__col_lw_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_lw_2:nth-child(6n) {
+        .row__col_lw_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_lw_2:nth-child(6n + 1) {
+        .row__col_lw_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
-    @for 2 from 1 to 11 {
-        .row__col_lo_2 {
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_lo_$(i) {
             position: relative;
-            left: calc(99.9% * 2/12 - (10px - 10px * 2/12) + 10px);
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
         }
     }
     /* auto size col */
@@ -156,7 +166,7 @@
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: 10px;
+        margin-right: $gutter;
     }
     .row__col_l:last-child {
         margin-right: 0;
@@ -181,32 +191,32 @@
 @media (--xlarge) {
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
-    @for 2 from 1 to 12 {
-        .row__col_xlw_2 {
-            width: calc(99.9% * 1/6 - (10px - 10px * 1/6));
+    @for $i from 1 to var(--columns) {
+        .row__col_xlw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_xlw_2:nth-child(1n) {
+        .row__col_xlw_$(i):nth-child(1n) {
             float: left;
-            margin-right: 10px;
+            margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_xlw_2:last-child {
+        .row__col_xlw_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_xlw_2:nth-child(6n) {
+        .row__col_xlw_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_xlw_2:nth-child(6n + 1) {
+        .row__col_xlw_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
-    @for 2 from 1 to 11 {
-        .row__col_xlo_2 {
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_xlo_$(i) {
             position: relative;
-            left: calc(99.9% * 2/12 - (10px - 10px * 2/12) + 10px);
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
         }
     }
     /* auto size col */
@@ -216,7 +226,7 @@
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: 10px;
+        margin-right: $gutter;
     }
     .row__col_xl:last-child {
         margin-right: 0;
@@ -241,32 +251,32 @@
 @media (--xxlarge) {
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
-    @for 2 from 1 to 12 {
-        .row__col_xxlw_2 {
-            width: calc(99.9% * 1/6 - (10px - 10px * 1/6));
+    @for $i from 1 to var(--columns) {
+        .row__col_xxlw_$(i) {
+            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_xxlw_2:nth-child(1n) {
+        .row__col_xxlw_$(i):nth-child(1n) {
             float: left;
-            margin-right: 10px;
+            margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_xxlw_2:last-child {
+        .row__col_xxlw_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_xxlw_2:nth-child(6n) {
+        .row__col_xxlw_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_xxlw_2:nth-child(6n + 1) {
+        .row__col_xxlw_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
-    @for 2 from 1 to 11 {
-        .row__col_xxlo_2 {
+    @for $i from 1 to var(--columnsExceptOne) {
+        .row__col_xxlo_$(i) {
             position: relative;
-            left: calc(99.9% * 2/12 - (10px - 10px * 2/12) + 10px);
+            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
         }
     }
     /* auto size col */
@@ -276,7 +286,7 @@
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: 10px;
+        margin-right: $gutter;
     }
     .row__col_xxl:last-child {
         margin-right: 0;
@@ -299,16 +309,23 @@
     }
 }
 .header {
-    background-color: red;
+    background-color: var(--color-blue);
 }
 .row {
     display: flex;
     flex-flow: row wrap;
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 1100px;
+    max-width: $maxWidth;
     margin-left: auto;
     margin-right: auto;
+}
+.row:before {
+    content: '';
+    display: table;
+}
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
 }
 .row_order_reverse {
     flex-direction: row-reverse;
