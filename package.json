@@ -12,8 +12,15 @@
   "dependencies": {
     "bower": "^1.7.9",
     "enb-postcss": "1.2.0",
+    "lost": "7.1.1",
     "postcss": "5.2.6",
-    "postcss-import": "9.0.0"
+    "postcss-custom-media": "5.0.1",
+    "postcss-for": "2.1.1",
+    "postcss-import": "9.0.0",
+    "postcss-mixins": "5.4.0",
+    "postcss-nested": "1.0.0",
+    "postcss-reporter": "2.0.0",
+    "postcss-simple-vars": "3.0.0"
   },
   "devDependencies": {
     "bem": "^2.0.0",
