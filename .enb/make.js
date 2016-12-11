@@ -6,10 +6,11 @@ var techs = {
         // optimization
         borschik: require('enb-borschik/techs/borschik'),
 
-        postcss : {
+        postcss: {
             core: require('enb-postcss/techs/enb-postcss'),
             plugins: [
-                require('postcss-import')()
+                require('postcss-import')(),
+                require('lost')()
             ]
         },
 
