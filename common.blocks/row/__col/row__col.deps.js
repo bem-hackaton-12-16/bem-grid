@@ -4,8 +4,6 @@
         {block: 'vars'}
     ],
     shouldDeps: {
-        mods: {
-            sw: 2
-        }
+        mods: {sw: 2}
     }
 }];
