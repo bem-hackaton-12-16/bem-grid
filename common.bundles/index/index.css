@@ -12,59 +12,59 @@
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
-        .row__col_sw_$(i) {
+        .row__col_$(size)w_$(i) {
             width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_sw_$(i):nth-child(1n) {
+        .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
             margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_sw_$(i):last-child {
+        .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_sw_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_sw_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
     @for $i from 1 to var(--columnsExceptOne) {
-        .row__col_so_$(i) {
+        .row__col_$(size)o_$(i) {
             position: relative;
-            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+            left: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)) + var(--gutter));
         }
     }
     /* auto size col */
-    .row__col_s {
+    .row__col_$(size) {
         display: flex;
         flex-flow: column nowrap;
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: $gutter;
+        margin-right: var(--gutter);
     }
-    .row__col_s:last-child {
+    .row__col_$(size):last-child {
         margin-right: 0;
     }
 }
 @media (--small-only) {
-    .row__col_sw_0 {
+    .row__col_$(size)w_0 {
         display: none;
     }
-    .row__col_so_0 {
+    .row__col_$(size)o_0 {
         margin-left: 0;
     }
     /* {s,m,l}of = {small, medium, large} order first */
-    .row__col_sof {
+    .row__col_$(size)of {
         order: -1;
     }
     /* {s,m,l}ol = {small, medium, large} order last */
-    .row__col_sol {
+    .row__col_$(size)ol {
         order: 1;
     }
 }
@@ -72,59 +72,59 @@
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
-        .row__col_mw_$(i) {
+        .row__col_$(size)w_$(i) {
             width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_mw_$(i):nth-child(1n) {
+        .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
             margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_mw_$(i):last-child {
+        .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_mw_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_mw_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
     @for $i from 1 to var(--columnsExceptOne) {
-        .row__col_mo_$(i) {
+        .row__col_$(size)o_$(i) {
             position: relative;
-            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+            left: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)) + var(--gutter));
         }
     }
     /* auto size col */
-    .row__col_m {
+    .row__col_$(size) {
         display: flex;
         flex-flow: column nowrap;
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: $gutter;
+        margin-right: var(--gutter);
     }
-    .row__col_m:last-child {
+    .row__col_$(size):last-child {
         margin-right: 0;
     }
 }
 @media (--medium-only) {
-    .row__col_mw_0 {
+    .row__col_$(size)w_0 {
         display: none;
     }
-    .row__col_mo_0 {
+    .row__col_$(size)o_0 {
         margin-left: 0;
     }
     /* {s,m,l}of = {small, medium, large} order first */
-    .row__col_mof {
+    .row__col_$(size)of {
         order: -1;
     }
     /* {s,m,l}ol = {small, medium, large} order last */
-    .row__col_mol {
+    .row__col_$(size)ol {
         order: 1;
     }
 }
@@ -132,59 +132,59 @@
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
-        .row__col_lw_$(i) {
+        .row__col_$(size)w_$(i) {
             width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_lw_$(i):nth-child(1n) {
+        .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
             margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_lw_$(i):last-child {
+        .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_lw_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_lw_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
     @for $i from 1 to var(--columnsExceptOne) {
-        .row__col_lo_$(i) {
+        .row__col_$(size)o_$(i) {
             position: relative;
-            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+            left: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)) + var(--gutter));
         }
     }
     /* auto size col */
-    .row__col_l {
+    .row__col_$(size) {
         display: flex;
         flex-flow: column nowrap;
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: $gutter;
+        margin-right: var(--gutter);
     }
-    .row__col_l:last-child {
+    .row__col_$(size):last-child {
         margin-right: 0;
     }
 }
 @media (--large-only) {
-    .row__col_lw_0 {
+    .row__col_$(size)w_0 {
         display: none;
     }
-    .row__col_lo_0 {
+    .row__col_$(size)o_0 {
         margin-left: 0;
     }
     /* {s,m,l}of = {small, medium, large} order first */
-    .row__col_lof {
+    .row__col_$(size)of {
         order: -1;
     }
     /* {s,m,l}ol = {small, medium, large} order last */
-    .row__col_lol {
+    .row__col_$(size)ol {
         order: 1;
     }
 }
@@ -192,59 +192,59 @@
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
-        .row__col_xlw_$(i) {
+        .row__col_$(size)w_$(i) {
             width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_xlw_$(i):nth-child(1n) {
+        .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
             margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_xlw_$(i):last-child {
+        .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_xlw_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_xlw_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
     @for $i from 1 to var(--columnsExceptOne) {
-        .row__col_xlo_$(i) {
+        .row__col_$(size)o_$(i) {
             position: relative;
-            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+            left: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)) + var(--gutter));
         }
     }
     /* auto size col */
-    .row__col_xl {
+    .row__col_$(size) {
         display: flex;
         flex-flow: column nowrap;
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: $gutter;
+        margin-right: var(--gutter);
     }
-    .row__col_xl:last-child {
+    .row__col_$(size):last-child {
         margin-right: 0;
     }
 }
 @media (--xlarge-only) {
-    .row__col_xlw_0 {
+    .row__col_$(size)w_0 {
         display: none;
     }
-    .row__col_xlo_0 {
+    .row__col_$(size)o_0 {
         margin-left: 0;
     }
     /* {s,m,l}of = {small, medium, large} order first */
-    .row__col_xlof {
+    .row__col_$(size)of {
         order: -1;
     }
     /* {s,m,l}ol = {small, medium, large} order last */
-    .row__col_xlol {
+    .row__col_$(size)ol {
         order: 1;
     }
 }
@@ -252,59 +252,59 @@
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
-        .row__col_xxlw_$(i) {
+        .row__col_$(size)w_$(i) {
             width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
         }
-        .row__col_xxlw_$(i):nth-child(1n) {
+        .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
             margin-right: var(--gutter);
             clear: none;
         }
-        .row__col_xxlw_$(i):last-child {
+        .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_xxlw_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child($columnsn) {
             margin-right: 0;
             float: right;
         }
-        .row__col_xxlw_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
             clear: both;
         }
     }
     /* offset col */
     /* {s,m,l}o = {small, medium, large} offset */
     @for $i from 1 to var(--columnsExceptOne) {
-        .row__col_xxlo_$(i) {
+        .row__col_$(size)o_$(i) {
             position: relative;
-            left: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns) + var(--gutter));
+            left: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)) + var(--gutter));
         }
     }
     /* auto size col */
-    .row__col_xxl {
+    .row__col_$(size) {
         display: flex;
         flex-flow: column nowrap;
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
-        margin-right: $gutter;
+        margin-right: var(--gutter);
     }
-    .row__col_xxl:last-child {
+    .row__col_$(size):last-child {
         margin-right: 0;
     }
 }
 @media (--xxlarge-only) {
-    .row__col_xxlw_0 {
+    .row__col_$(size)w_0 {
         display: none;
     }
-    .row__col_xxlo_0 {
+    .row__col_$(size)o_0 {
         margin-left: 0;
     }
     /* {s,m,l}of = {small, medium, large} order first */
-    .row__col_xxlof {
+    .row__col_$(size)of {
         order: -1;
     }
     /* {s,m,l}ol = {small, medium, large} order last */
-    .row__col_xxlol {
+    .row__col_$(size)ol {
         order: 1;
     }
 }
@@ -314,7 +314,7 @@
 .row {
     display: flex;
     flex-flow: row wrap;
-    max-width: $maxWidth;
+    max-width: var(--maxWidth);
     margin-left: auto;
     margin-right: auto;
 }
@@ -333,146 +333,146 @@
 }
 @media (--small) {
     /* {s,m,l}al = {small, medium, large} align left */
-    .row_sal {
+    .row_$(size)al {
         justify-content: flex-start;
         text-align: start;
     }
     /* {s,m,l}ac = {small, medium, large} align center */
-    .row_sac {
+    .row_$(size)ac {
         justify-content: center;
         text-align: center;
     }
     /* {s,m,l}ar = {small, medium, large} align right */
-    .row_sar {
+    .row_$(size)ar {
         justify-content: flex-end;
         text-align: end;
     }
     /* {s,m,l}vat = {small, medium, large} vertical align top */
-    .row_svat {
+    .row_$(size)vat {
         align-items: flex-start;
     }
     /* {s,m,l}vam = {small, medium, large} vertical align medium */
-    .row_svam {
+    .row_$(size)vam {
         align-items: center;
     }
     /* {s,m,l}vab = {small, medium, large} vertical align bottom */
-    .row_svab {
+    .row_$(size)vab {
         align-items: flex-end;
     }
 }
 @media (--medium) {
     /* {s,m,l}al = {small, medium, large} align left */
-    .row_mal {
+    .row_$(size)al {
         justify-content: flex-start;
         text-align: start;
     }
     /* {s,m,l}ac = {small, medium, large} align center */
-    .row_mac {
+    .row_$(size)ac {
         justify-content: center;
         text-align: center;
     }
     /* {s,m,l}ar = {small, medium, large} align right */
-    .row_mar {
+    .row_$(size)ar {
         justify-content: flex-end;
         text-align: end;
     }
     /* {s,m,l}vat = {small, medium, large} vertical align top */
-    .row_mvat {
+    .row_$(size)vat {
         align-items: flex-start;
     }
     /* {s,m,l}vam = {small, medium, large} vertical align medium */
-    .row_mvam {
+    .row_$(size)vam {
         align-items: center;
     }
     /* {s,m,l}vab = {small, medium, large} vertical align bottom */
-    .row_mvab {
+    .row_$(size)vab {
         align-items: flex-end;
     }
 }
 @media (--large) {
     /* {s,m,l}al = {small, medium, large} align left */
-    .row_lal {
+    .row_$(size)al {
         justify-content: flex-start;
         text-align: start;
     }
     /* {s,m,l}ac = {small, medium, large} align center */
-    .row_lac {
+    .row_$(size)ac {
         justify-content: center;
         text-align: center;
     }
     /* {s,m,l}ar = {small, medium, large} align right */
-    .row_lar {
+    .row_$(size)ar {
         justify-content: flex-end;
         text-align: end;
     }
     /* {s,m,l}vat = {small, medium, large} vertical align top */
-    .row_lvat {
+    .row_$(size)vat {
         align-items: flex-start;
     }
     /* {s,m,l}vam = {small, medium, large} vertical align medium */
-    .row_lvam {
+    .row_$(size)vam {
         align-items: center;
     }
     /* {s,m,l}vab = {small, medium, large} vertical align bottom */
-    .row_lvab {
+    .row_$(size)vab {
         align-items: flex-end;
     }
 }
 @media (--xlarge) {
     /* {s,m,l}al = {small, medium, large} align left */
-    .row_xlal {
+    .row_$(size)al {
         justify-content: flex-start;
         text-align: start;
     }
     /* {s,m,l}ac = {small, medium, large} align center */
-    .row_xlac {
+    .row_$(size)ac {
         justify-content: center;
         text-align: center;
     }
     /* {s,m,l}ar = {small, medium, large} align right */
-    .row_xlar {
+    .row_$(size)ar {
         justify-content: flex-end;
         text-align: end;
     }
     /* {s,m,l}vat = {small, medium, large} vertical align top */
-    .row_xlvat {
+    .row_$(size)vat {
         align-items: flex-start;
     }
     /* {s,m,l}vam = {small, medium, large} vertical align medium */
-    .row_xlvam {
+    .row_$(size)vam {
         align-items: center;
     }
     /* {s,m,l}vab = {small, medium, large} vertical align bottom */
-    .row_xlvab {
+    .row_$(size)vab {
         align-items: flex-end;
     }
 }
 @media (--xxlarge) {
     /* {s,m,l}al = {small, medium, large} align left */
-    .row_xxlal {
+    .row_$(size)al {
         justify-content: flex-start;
         text-align: start;
     }
     /* {s,m,l}ac = {small, medium, large} align center */
-    .row_xxlac {
+    .row_$(size)ac {
         justify-content: center;
         text-align: center;
     }
     /* {s,m,l}ar = {small, medium, large} align right */
-    .row_xxlar {
+    .row_$(size)ar {
         justify-content: flex-end;
         text-align: end;
     }
     /* {s,m,l}vat = {small, medium, large} vertical align top */
-    .row_xxlvat {
+    .row_$(size)vat {
         align-items: flex-start;
     }
     /* {s,m,l}vam = {small, medium, large} vertical align medium */
-    .row_xxlvam {
+    .row_$(size)vam {
         align-items: center;
     }
     /* {s,m,l}vab = {small, medium, large} vertical align bottom */
-    .row_xxlvab {
+    .row_$(size)vab {
         align-items: flex-end;
     }
 }
