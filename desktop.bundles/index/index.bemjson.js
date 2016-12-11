@@ -20,19 +20,38 @@ module.exports = {
             block: 'content',
             content: [
                 {
-                    tag: 'p',
+                    block: 'row',
                     content: [
-                        'This is a demo page to show blocks from bem-components library. ',
-                        { tag: 'br' },
-                        'Feel free to replace it with your own content in desktop.bundles/index/index.bemjson.js.',
-                        { tag: 'br' },
-                        'For more info about BEM check out ',
                         {
-                            block: 'link',
-                            url: 'https://bem.info/',
-                            content: 'bem.info'
+                            elem: 'col',
+                            mods: {sm: 2},
+                            content: 'Hello 1'
                         },
-                        '.'
+                        {
+                            elem: 'col',
+                            mods: {sm: 2},
+                            content: 'Hello 2'
+                        },
+                        {
+                            elem: 'col',
+                            mods: {sm: 2},
+                            content: 'Hello 3'
+                        },
+                        {
+                            elem: 'col',
+                            mods: {sm: 2},
+                            content: 'Hello 4'
+                        },
+                        {
+                            elem: 'col',
+                            mods: {sm: 2},
+                            content: 'Hello 5'
+                        },
+                        {
+                            elem: 'col',
+                            mods: {sw: 2},
+                            content: 'Hello 6'
+                        }
                     ]
                 }
             ]
