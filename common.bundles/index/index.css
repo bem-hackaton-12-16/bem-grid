@@ -1484,13 +1484,20 @@
     }
 }
 .main-content {
-    background-color: #EEE;
+    padding: 20px 0;
 }
 .header {
     padding: 20px;
     font-family: 'Yandex Sans Text', 'PT Sans';
     background-color: #fc0;
     color: #fff;
+}
+.block-information {
+    border: 1px solid #fc0;
+    padding: 20px;
+}
+.row__col_lw_12 .block-information {
+    margin-bottom: 10px;
 }
 .row {
     display: flex;

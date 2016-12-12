@@ -16,6 +16,9 @@ exports.deps = [
         "block": "header"
     },
     {
+        "block": "block-information"
+    },
+    {
         "block": "row"
     }
 ];

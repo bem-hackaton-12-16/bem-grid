@@ -1,0 +1,10 @@
+.block-information {
+    border: 1px solid var(--color-yellow);
+    padding: 20px;
+}
+
+.row__col_lw_12 {
+    .block-information {
+        margin-bottom: 10px;
+    }
+}
