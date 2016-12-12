@@ -3,7 +3,7 @@
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
         .row__col_$(size)w_$(i) {
-            lost-column: $i/$columns;
+            lost-column: $i/var(--columns);
         }
     }
     /* offset col */

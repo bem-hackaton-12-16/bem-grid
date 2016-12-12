@@ -13,7 +13,7 @@
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
         .row__col_$(size)w_$(i) {
-            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+            width: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)));
         }
         .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
@@ -23,11 +23,11 @@
         .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n) {
             margin-right: 0;
             float: right;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n + 1) {
             clear: both;
         }
     }
@@ -73,7 +73,7 @@
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
         .row__col_$(size)w_$(i) {
-            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+            width: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)));
         }
         .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
@@ -83,11 +83,11 @@
         .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n) {
             margin-right: 0;
             float: right;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n + 1) {
             clear: both;
         }
     }
@@ -133,7 +133,7 @@
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
         .row__col_$(size)w_$(i) {
-            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+            width: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)));
         }
         .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
@@ -143,11 +143,11 @@
         .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n) {
             margin-right: 0;
             float: right;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n + 1) {
             clear: both;
         }
     }
@@ -193,7 +193,7 @@
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
         .row__col_$(size)w_$(i) {
-            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+            width: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)));
         }
         .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
@@ -203,11 +203,11 @@
         .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n) {
             margin-right: 0;
             float: right;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n + 1) {
             clear: both;
         }
     }
@@ -253,7 +253,7 @@
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
         .row__col_$(size)w_$(i) {
-            width: calc(99.9% * $i/$columns - (var(--gutter) - var(--gutter) * $i/$columns));
+            width: calc(99.9% * $i/var(--columns) - (var(--gutter) - var(--gutter) * $i/var(--columns)));
         }
         .row__col_$(size)w_$(i):nth-child(1n) {
             float: left;
@@ -263,11 +263,11 @@
         .row__col_$(size)w_$(i):last-child {
             margin-right: 0;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n) {
             margin-right: 0;
             float: right;
         }
-        .row__col_$(size)w_$(i):nth-child($columnsn + 1) {
+        .row__col_$(size)w_$(i):nth-child(var(--columns)n + 1) {
             clear: both;
         }
     }
