@@ -5,15 +5,15 @@ var levels = ['common.blocks'],
         postcss : {
             core: require('enb-postcss/techs/enb-postcss'),
             plugins: [
-	            require('postcss-import')(),
-	            require('postcss-mixins')(),
-	            require('postcss-at-rules-variables')(),
-	            require('postcss-for')(),
-	            require('postcss-custom-media')(),
-	            require('postcss-calc')(),
-	            require('postcss-nested')(),
-	            require('postcss-css-variables')(),
-	            require('lost')()
+                require('postcss-import')(),
+                require('postcss-mixins')(),
+                require('postcss-at-rules-variables')(),
+                require('postcss-for')(),
+                require('postcss-custom-media')(),
+                require('postcss-calc')(),
+                require('postcss-nested')(),
+                require('postcss-css-variables')(),
+                require('lost')()
             ]
         }
     };

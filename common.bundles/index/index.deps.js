@@ -1,9 +1,9 @@
 exports.deps = [
     {
-        "block": "vars"
+        "block": "mq"
     },
     {
-        "block": "mq"
+        "block": "vars"
     },
     {
         "block": "row",

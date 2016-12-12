@@ -1,7 +1,7 @@
 {
   "author": "",
   "name": "bem-grid",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/bem/project-stub.git"
@@ -52,8 +52,7 @@
   },
   "scripts": {
     "start": "enb server",
-    "postinstall": "npm run deps",
-    "deps": "bower i --allow-root"
+    "postinstall": "npm run deps"
   },
   "private": true
 }

@@ -1,3 +1,4 @@
 exports.blocks = [
-    {name: 'row'}
+    {name: 'row'},
+    {name: 'header'}
 ];
