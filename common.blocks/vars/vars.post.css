@@ -3,8 +3,8 @@
     --maxWidth: 1100px;
     --gutter: 10px;
     --flex: 'flex';
-    --size: 11;
     --columnsExceptOne: 11;
 
-    --color-blue: #00f;
+    --color-yellow: #fc0;
+    --color-white: #fff;
 }

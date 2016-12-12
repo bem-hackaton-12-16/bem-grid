@@ -1,0 +1,7 @@
+:root {
+    --maxWidth: 900px;
+}
+
+.main-content {
+    background-color: #EEE;
+}

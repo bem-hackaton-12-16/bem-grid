@@ -10,6 +10,9 @@ exports.deps = [
         "elem": "col"
     },
     {
+        "block": "main-content"
+    },
+    {
         "block": "header"
     },
     {

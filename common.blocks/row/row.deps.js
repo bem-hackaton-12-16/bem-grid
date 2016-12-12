@@ -4,6 +4,7 @@
         {block: 'vars'}
     ],
     shouldDeps : [
-        {elems : 'col'}
+        {elems : 'col'},
+        {block : 'main-content'}
     ]
 }];
