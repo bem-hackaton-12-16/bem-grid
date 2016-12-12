@@ -40,11 +40,11 @@
 
 @define-mixin col_visibility_classes $size {
     .row__col_$(size)w_0 {
-         display: none;
-     }
+        display: none;
+    }
 
     .row__col_$(size)o_0 {
-         margin-left: 0;
+        margin-left: 0;
     }
 }
 
