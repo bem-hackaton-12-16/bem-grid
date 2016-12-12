@@ -1,5 +1,3 @@
-@lost gutter var(--gutter);
-
 @define-mixin row_align_classes $size {
     /* {s,m,l}al = {small, medium, large} align left */
     .row_$(size)al {
@@ -8,9 +6,9 @@
     }
     /* {s,m,l}ac = {small, medium, large} align center */
     .row_$(size)ac {
-            justify-content: center;
-            text-align: center;
-        }
+        justify-content: center;
+        text-align: center;
+    }
     /* {s,m,l}ar = {small, medium, large} align right */
     .row_$(size)ar {
         justify-content: flex-end;

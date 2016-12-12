@@ -11,11 +11,11 @@ var levels = ['common.blocks'],
 	            // require('postcss-for-variables')(),
 	            require('postcss-for')(),
 	            require('postcss-custom-media')(),
-	            // require('postcss-css-variables')(),
 	            // require('postcss-simple-vars')(),
 	            require('postcss-calc')(),
 	            require('postcss-nested')(),
-                require('lost')()
+	            require('postcss-css-variables')(),
+	            require('lost')()
             ]
         }
     };
