@@ -9,3 +9,8 @@
 $ ./node_modules/.bin/enb make
 $ npm start
 ```
+
+### TODO
+1. Сделать переопределение по уровням
+2. Добавить Gemini тесты
+3. Создать npm модуль

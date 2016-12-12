@@ -10,13 +10,13 @@ exports.deps = [
         "elem": "col"
     },
     {
-        "block": "main-content"
-    },
-    {
         "block": "header"
     },
     {
         "block": "block-information"
+    },
+    {
+        "block": "main-content"
     },
     {
         "block": "row"
