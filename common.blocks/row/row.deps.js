@@ -1,6 +1,7 @@
 [{
     mustDeps : [
-        { block : 'mq' }
+        { block : 'mq' },
+        {block: 'vars'}
     ],
     shouldDeps : [
         { elems : 'col' },

@@ -1,7 +1,7 @@
 {
   "author": "",
-  "name": "bem-project-stub",
-  "version": "1.7.0",
+  "name": "bem-grid",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/bem/project-stub.git"
@@ -14,13 +14,17 @@
     "enb-postcss": "1.2.0",
     "lost": "7.1.1",
     "postcss": "5.2.6",
+    "postcss-calc": "5.3.1",
+    "postcss-css-variables": "0.6.0",
     "postcss-custom-media": "5.0.1",
     "postcss-for": "2.1.1",
+    "postcss-for-variables": "0.0.5",
     "postcss-import": "9.0.0",
     "postcss-mixins": "5.4.0",
     "postcss-nested": "1.0.0",
     "postcss-reporter": "2.0.0",
-    "postcss-simple-vars": "3.0.0"
+    "postcss-simple-vars": "3.0.0",
+    "postcss-variables": "0.1.0"
   },
   "devDependencies": {
     "bem": "^2.0.0",
