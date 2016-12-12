@@ -1,6 +1,6 @@
 @lost gutter var(--gutter);
 
-@define-mixin row_align_classes var(--size) {
+@define-mixin row_align_classes $size {
     /* {s,m,l}al = {small, medium, large} align left */
     .row_$(size)al {
         justify-content: flex-start;

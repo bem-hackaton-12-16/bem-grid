@@ -1,4 +1,4 @@
-@define-mixin col_base_classes val(--size) {
+@define-mixin col_base_classes $size {
     /* normal col */
     /* {s,m,l}w = {small, medium, large} width */
     @for $i from 1 to var(--columns) {
@@ -27,7 +27,7 @@
     }
 }
 
-@define-mixin col_order_classes var(--size) {
+@define-mixin col_order_classes $size {
     /* {s,m,l}of = {small, medium, large} order first */
     .row__col_$(size)of {
          order: -1;
@@ -38,7 +38,7 @@
      }
 }
 
-@define-mixin col_visibility_classes var(--size) {
+@define-mixin col_visibility_classes $size {
     .row__col_$(size)w_0 {
          display: none;
      }
