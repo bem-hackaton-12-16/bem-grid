@@ -1,10 +1,7 @@
 :root {
-    --columns: 12;
-    --maxWidth: 1100px;
+    --columns: 10;
+    --columnsExceptOne: 9;
+    --maxWidth: 700px;
     --gutter: 10px;
     --flex: 'flex';
-    --size: 11;
-    --columnsExceptOne: 11;
-
-    --color-blue: #00f;
 }

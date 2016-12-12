@@ -7,14 +7,12 @@ var levels = ['common.blocks'],
             plugins: [
 	            require('postcss-import')(),
 	            require('postcss-mixins')(),
-	            require('postcss-at-rules-variables')(),
-	            // require('postcss-for-variables')(),
-	            require('postcss-for')(),
-	            require('postcss-custom-media')(),
-	            // require('postcss-simple-vars')(),
 	            require('postcss-calc')(),
-	            require('postcss-nested')(),
+	            require('postcss-at-rules-variables')(),
 	            require('postcss-css-variables')(),
+	            require('postcss-custom-media')(),
+	            require('postcss-nested')(),
+	            require('postcss-for')(),
 	            require('lost')()
             ]
         }
